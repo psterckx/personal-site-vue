@@ -11,6 +11,7 @@
         justify-between
         text-gray-600
       "
+      :class="{ hidden: $route.name === 'Router' }"
     >
       <router-link
         to="/"

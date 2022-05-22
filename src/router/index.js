@@ -37,6 +37,7 @@ const router = createRouter({
     {
       path: "/p/:name",
       component: Router,
+      name: "Router",
       props: true,
     },
 
