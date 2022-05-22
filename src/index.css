@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bb {
+  outline: 1px solid red;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  overflow: auto;
+}
+html {
+  height: -webkit-fill-available;
+  overflow: auto;
+}
+
+a,
+button,
+.toggle {
+  -webkit-tap-highlight-color: transparent;
+}
