@@ -27,7 +27,7 @@
             bg-gray-100
             transition-all
             rounded-xl
-            mb-10
+            mb-12
             shadow-lg
             overflow-hidden
             group
@@ -51,6 +51,7 @@
             <p class="sm:text-sm md:text-md">
               {{ project.description }}
             </p>
+            <p class="sm:text-sm md:text-md" v-if="project.photo_creds" v-html="project.photo_creds"></p>
           </div>
         </a>
       </div>
@@ -61,6 +62,7 @@
 <script>
 import thermostat_img from "../assets/thermostat_controller.jpg";
 import starship_img from "../assets/starship_with_sns.jpg";
+import tictactoe_img from "../assets/tictactoe.jpg";
 
 export default {
   data() {
@@ -80,6 +82,14 @@ export default {
           link: "https://github.com/psterckx/starship-notification-system",
           description:
             "A Starship notification system built using AWS Lambda, SNS, and S3 and deployed with the Serverless Application Framework.",
+        },
+        {
+          name: "Online Multiplayer Tic Tac Toe Game",
+          image: tictactoe_img,
+          link: "https://gist.github.com/psterckx/b40040d5abe9e218ebd6849527389968",
+          description:
+            "An online multiplayer tic tac toe game built using websockets, serverless AWS services, and Vue.",
+          photo_creds: "Photo by <a href=\"https://unsplash.com/@treatzone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Matthew Davis</a> on <a href=\"https://unsplash.com/s/photos/tic-tac-toe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>",
         },
       ],
     };
